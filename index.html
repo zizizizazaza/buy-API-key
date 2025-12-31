@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HETU // PROTOCOL SURFACE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg-color: #0A0A0A;
+        --bg-surface: #0F0F0F;
+        --text-color: #FFFFFF;
+        --text-muted: #71717A;
+        --border-color: #18181B;
+        --accent-red: #FF3B30;
+        --accent-gradient: linear-gradient(90deg, #FF1E1E 0%, #FF5E3A 50%, #FF2D55 100%);
+        --p2p-cyan: #00D1FF;
+        --price-pink: #F472B6;
+      }
+
+      [data-theme='light'] {
+        --bg-color: #FFFFFF;
+        --bg-surface: #F9F9FB;
+        --text-color: #000000;
+        --text-muted: #52525B;
+        --border-color: #E4E4E7;
+        --p2p-cyan: #0088AA; /* Slightly darker for legibility on white */
+        --price-pink: #DB2777;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: 'Inter', sans-serif;
+        cursor: crosshair;
+        letter-spacing: -0.01em;
+        -webkit-font-smoothing: antialiased;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .mono { font-family: 'JetBrains Mono', monospace; }
+      .sans { font-family: 'Inter', sans-serif; }
+      
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: var(--bg-color); }
+      ::-webkit-scrollbar-thumb { background: #333; }
+      
+      .text-accent { color: var(--accent-red); }
+      .bg-accent-gradient { background: var(--accent-gradient); }
+      .border-accent { border-color: var(--accent-red); }
+      
+      .glitch-hover:hover {
+        text-shadow: 1px 0 var(--accent-red), -1px 0 #FF2D55;
+      }
+      
+      .manifesto-title {
+        letter-spacing: -0.06em;
+        line-height: 0.85;
+      }
+
+      /* Global reset for UI sharp edges */
+      * { border-radius: 0 !important; }
+      * { font-style: normal !important; }
+
+      /* Confident Switch Button Styles */
+      .btn-primary {
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 1rem 1.5rem;
+        border: 1px solid var(--text-color);
+        background-color: transparent;
+        color: var(--text-color);
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+      .btn-primary:hover:not(:disabled) {
+        background-color: var(--accent-red);
+        border-color: var(--accent-red);
+        color: white;
+      }
+      .btn-primary:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+      
+      .btn-outline {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid var(--border-color);
+        color: var(--text-muted);
+        transition: all 0.2s ease;
+        background-color: transparent;
+      }
+      .btn-outline:hover {
+        border-color: var(--accent-red);
+        color: var(--accent-red);
+      }
+
+      /* Custom background and border classes using variables */
+      .bg-main { background-color: var(--bg-color); }
+      .bg-sub { background-color: var(--bg-surface); }
+      .border-main { border-color: var(--border-color); }
+      .text-main { color: var(--text-color); }
+      .text-dim { color: var(--text-muted); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "API key 购买页面",
+  "description": "A high-fidelity, crypto-native interface for decentralized GPU mining and AI inference clusters. Built for the next generation of intelligence infrastructure.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
